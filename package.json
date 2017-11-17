@@ -24,7 +24,7 @@
     "node-schedule": "~1.2.5",
     "prompt": "~1.0.0",
     "request": "~2.83.0",
-    "svn-spawn": "~0.1.5",
+    "svn-interface": "~0.5.0",
     "unzip": "~0.1.11",
     "walker": "~1.0.7",
     "winston": "~2.4.0"
