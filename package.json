@@ -22,6 +22,7 @@
     "moment": "~2.19.2",
     "node-sass": "~4.6.1",
     "node-schedule": "~1.2.5",
+    "node-svn-ultimate": "~1.1.0",
     "prompt": "~1.0.0",
     "request": "~2.83.0",
     "unzip": "~0.1.11",
