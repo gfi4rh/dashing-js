@@ -19,7 +19,7 @@ send_event = function(id, data) {
     data.auth_token = auth_token;
   }
   request({
-      url: 'http://localhost:3030/widgets/' + id,
+      url: 'http://localhost:80/widgets/' + id,
       method: 'POST',
       json: data
     }, function(err, res, body) {
@@ -163,7 +163,7 @@ program.command('install <id>')
 
 program.command('start')
   .description('Starts the server in style!')
-  .option('-p, --port <port>', 'Listen port', 3030)
+  .option('-p, --port <port>', 'Listen port', 80)
   .option('-j, --job_path <path>', 'Specify the directory where jobs are stored')
   .option('-e, --view_engine <engine>', 'Specify the view engine to use (defaults to jade)')
   .option('-d, --daemon', 'Daemonize the server')
