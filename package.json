@@ -23,6 +23,8 @@
     "moment": "~2.19.2",
     "node-sass": "~4.6.1",
     "node-schedule": "~1.2.5",
+    "nosql": "~6.1.0",
+    "oracledb": "~2.0.15",
     "prompt": "~1.0.0",
     "request": "~2.83.0",
     "svn-interface": "~0.5.0",
