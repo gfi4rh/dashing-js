@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "dashing-js": "~{{= dashing.version }}"
+    "dashing-js": "https://github.com/gfi4rh/dashing-js.git"
   },
   "engine": "node >= 0.10"
 }
