@@ -1,6 +1,6 @@
 {
-  "name": "{{= name }}",
-  "description": "{{= name }}",
+  "name": "default name",
+  "description": "default description",
   "author": "<Put your name here>",
   "version": "0.0.1",
   "private": true,
