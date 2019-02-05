@@ -104,8 +104,8 @@ program.command('install <id>')
           utils.mkdir.sync('widgets/' + origDirName);
           entry.autodrain();
         } else if (entry.type === 'File') {
-          var m = entry.path.match(/(\w*)\.(coffee|html|scss)$/);
-          var mj = entry.path.match(/(\w*)\.job\.(js|coffee)$/);
+          var m = entry.path.match(/(\w*)\.(js|coffee|html|scss)$/);
+          var mj = entry.path.match(/(\w*)\.job\.(js)$/);
           if (mj) {
             console.log('      \x1b[36mcreate\x1b[0m  jobs/' + mj[0]);
             entry.pipe(fs.createWriteStream('jobs/' + mj[0]));
@@ -134,8 +134,8 @@ program.command('install <id>')
           var gist = JSON.parse(body);
           var widgetName;
           for (var k in gist.files) {
-            var m = gist.files[k].filename.match(/(\w*)\.(coffee|html|scss)$/);
-            if (m && !gist.files[k].filename.match(/(\w*)\.job\.coffee$/)) {
+            var m = gist.files[k].filename.match(/(\w*)\.(js|coffee|html|scss)$/);
+            if (m && !gist.files[k].filename.match(/(\w*)\.job$/)) {
               widgetName = m[1];
               break;
             }
@@ -144,9 +144,9 @@ program.command('install <id>')
             for (var k in gist.files) {
               var filename = gist.files[k].filename;
               var outFile = filename;
-              if (filename.match(/(\w*)\.job\.(js|coffee)$/)) {
+              if (filename.match(/(\w*)\.job\.(js)$/)) {
                 utils.write('jobs/' + filename, gist.files[k].content);
-              } else/* if(filename.match(/(\w*)\.(coffee|html|scss)$/))*/ {
+              } else/* if(filename.match(/(\w*)\.(js|coffee|html|scss)$/))*/ {
                 utils.write('widgets/' + widgetName + '/' + filename, gist.files[k].content);
               }
             }
@@ -202,7 +202,7 @@ program.command('job <job_name>')
   .description('Runs the specified job. Make sure to supply your auth token if you have one set.')
   .option('-a, --auth_token <token>', 'The auth_token to use')
   .action(function(job_name, options) {
-    require('coffee-script');
+    require('coffeescript');
     // Load custom libraries
     fs.readdir([process.cwd(), 'lib'].join(path.sep), function(err, files) {
       if (err) throw err;
@@ -214,7 +214,7 @@ program.command('job <job_name>')
     if (options['auth_token']) {
       auth_token = options['auth_token'];
     }
-    var exts = ['js', 'coffee'];
+    var exts = ['js'];
     var err = true;
     for (var i in exts) {
       var filePath = [process.cwd(), 'jobs', job_name + '.job.' + exts[i]].join(path.sep);
