@@ -1,8 +1,8 @@
 {
   "name": "dashing-js",
   "description": "Port of Dashing to node.js",
-  "author": "Fabio Caseri <fabio.caseri@gmail.com> (http://www.fabiocaseri.com)",
-  "version": "0.1.5",
+  "author": "Gfi",
+  "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
     "async": "~0.2.7",
@@ -23,25 +23,11 @@
     "unzip": "~0.1.7",
     "walker": "~1.0.3",
     "winston": "~0.7.1"
-  },
-  "devDependencies": {
-    "ejs": "*",
-    "pug": "*",
-    "mocha": "*",
-    "should": "*"
-  },
-  "keywords": [
-    "dashing",
-    "dashboard",
-    "web"
-  ],
-  "repository": "git://github.com/fabiocaseri/dashing-js",
+  }
+  "repository": "https://github.com/gfi4rh/dashing-js",
   "main": "index",
   "bin": {
     "dashing-js": "./bin/dashing-js"
-  },
-  "scripts": {
-    "test": "make test"
-  },
+  }
   "engine": "node >= 0.10"
 }
