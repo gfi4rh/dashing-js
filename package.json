@@ -23,11 +23,11 @@
     "unzip": "~0.1.7",
     "walker": "~1.0.3",
     "winston": "~0.7.1"
-  }
+  },
   "repository": "https://github.com/gfi4rh/dashing-js",
   "main": "index",
   "bin": {
     "dashing-js": "./bin/dashing-js"
-  }
+  },
   "engine": "node >= 0.10"
 }
