@@ -1,6 +1,6 @@
 {
-  "name": "default name",
-  "description": "default description",
+  "name": "default_name",
+  "description": "default_description",
   "author": "<Put your name here>",
   "version": "0.0.1",
   "private": true,
